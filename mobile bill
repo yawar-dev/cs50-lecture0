@@ -1,1 +1,34 @@
+#cell phone bill
+normal_bill=15
+air_call=50
+text_msg=50
+call_911=0.44
+
+
+
+total_calls=int(input('Enter the total minutes called in the month: '))
+total_msgs=int(input('Enter the total text  messages in the month: '))
+
+#computing the bill
+if total_calls==50 and total_msgs==50:
+    final_bill=(15+call_911)+(15+call_911)*0.05
+elif total_calls> 50 and total_msgs>50:
+    extra_call=total_calls - air_call
+    extra_msg=total_msgs-text_msg
+    final_bill=(normal_bill+extra_call*0.25+extra_msg*0.15+call_911)+ \
+    (normal_bill+extra_call*0.25+extra_msg*0.15+call_911)*0.05
+
+else:
+    final_bill=' '
+    
+    
+    
+    
+if final_bill==' ':
+    print('enter the valid values! ')
+else:
+    print('The phone bill for the additional calls and msgs and plan is=$%.2f'%(final_bill))
+    
+
+
 
